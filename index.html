@@ -8,20 +8,22 @@
 		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body>
-		<div class="container mt-2 row">
+		<div class="container mt-2">
 			<!-- Duration Card - To Pick Test Time -->
-			<div class="card col-4 mt-3 duration-card">
-				<div class="card-body bg-light">
-					<div>
-						<label class="ml-1" for="#select-time"> Test Duration </label><br>
-						<select class="border rounded selectpicker mt-1" id="select-time">
-							<option value="60">60 Seconds</option>
-							<option value="120">120 Seconds</option>
-							<option value="180">180 Seconds</option>
-						</select>
-					</div>
-					<div class="m-2 mt-3 text-center">
-						<button id="start-test" class="btn btn-primary"> Start Test </button>
+			<div class="row d-flex justify-content-center duration-card">
+				<div class="card col-3 mt-3">
+					<div class="card-body">
+						<div>
+							<label class="ml-1 text-white" for="#select-time"> Test Duration </label><br>
+							<select class="border rounded selectpicker mt-1" id="select-time">
+								<option value="60">60 Seconds</option>
+								<option value="120">120 Seconds</option>
+								<option value="180">180 Seconds</option>
+							</select>
+						</div>
+						<div class="m-2 mt-3 text-center">
+							<button id="start-test" class="btn btn-light border"> Start Test </button>
+						</div>
 					</div>
 				</div>
 			</div>

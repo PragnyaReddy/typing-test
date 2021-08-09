@@ -1,12 +1,21 @@
 body {
   font-family: sans-serif;
   display: grid;
-  /*height: 100vh;*/
-  /*place-items: center;*/
+  background: aliceblue;
+}
+
+.container {
+  height: 100vh;
+  place-items: center;
 }
 
 .test-card, .duration-card {
 	place-items: center;
+}
+
+.duration-card .card {
+  height:  200px;
+  background-color: teal;
 }
 
 .test-text {
