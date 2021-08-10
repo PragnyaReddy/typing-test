@@ -12,6 +12,7 @@ function start_test(duration) {
 	$(".test-card").removeClass('d-none')
 	$("#base-timer-label").text(`${formatTime(duration)}`)
 	testDuration = duration
+	setRemainingPathColor(testDuration)
 }
 
 // Verify text and calculate score
@@ -32,7 +33,7 @@ function displayScore() {
 
 function saveScore(score) {
 	let scores = localStorage.getItem('score')
-	let scoreList = scores ? JSON.parse(scores) : ["-"]
+	let scoreList = scores ? JSON.parse(scores) : []
 	$('#score-list').html(`<div class="prev-score">Previous Scores:</div>`)
 	for(var i=0; i < scoreList.length; i++) {
 		$('#score-list').append(`<div class="text-primary mx-2">${scoreList[i]}</div>`)

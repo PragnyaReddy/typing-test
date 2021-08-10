@@ -58,7 +58,6 @@ function onTimesUp() {
 function startTimer(duration) {
   TIME_LIMIT = duration
   timePassed = 0
-  setRemainingPathColor(TIME_LIMIT)
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
