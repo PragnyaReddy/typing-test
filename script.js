@@ -26,6 +26,21 @@ function displayScore() {
 	$("#wrong").text(wrong)
 	$("#score").text(score)
 	$("#scoreModal").modal('show')
+	$("#accuracy").text(`${right/(right + wrong)*100}%`)
+	saveScore(score)
+}
+
+function saveScore(score) {
+	let scores = localStorage.getItem('score')
+	let scoreList = scores ? JSON.parse(scores) : ["-"]
+	$('#score-list').html(`<div class="prev-score">Previous Scores:</div>`)
+	for(var i=0; i < scoreList.length; i++) {
+		$('#score-list').append(`<div class="text-primary mx-2">${scoreList[i]}</div>`)
+	}
+	if(scoreList.length > 2)
+		scoreList.shift()
+	scoreList.push(score)
+	localStorage.setItem('score', JSON.stringify(scoreList))
 }
 
 $('body')
@@ -49,5 +64,4 @@ $('body')
 }).on("click", "#close-modal", function() {
 	$("#scoreModal").modal('hide')
 })
-
 

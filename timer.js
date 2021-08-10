@@ -56,7 +56,6 @@ function onTimesUp() {
 }
 
 function startTimer(duration) {
-  console.log(duration)
   TIME_LIMIT = duration
   timePassed = 0
   setRemainingPathColor(TIME_LIMIT)

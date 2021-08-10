@@ -14,7 +14,7 @@
 				<div class="card col-3 mt-3">
 					<div class="card-body">
 						<div>
-							<label class="ml-1 text-white" for="#select-time"> Test Duration </label><br>
+							<label class="ml-1 text-white" for="#select-time">Pick Test Duration </label><br>
 							<select class="border rounded selectpicker mt-1" id="select-time">
 								<option value="60">60 Seconds</option>
 								<option value="120">120 Seconds</option>
@@ -23,6 +23,9 @@
 						</div>
 						<div class="m-2 mt-3 text-center">
 							<button id="start-test" class="btn btn-light border"> Start Test </button>
+						</div>
+						<div class="text-center info-text">
+							<span class="text-white border-bottom border-white" data-title="For every correct word typed, you gain ten points. Misspelt words lose you five points.">How is it scored?</span>
 						</div>
 					</div>
 				</div>
@@ -42,21 +45,26 @@
 		</div>
 		<!-- Modal to display score -->
 		<div class="modal fade" id="scoreModal" tabindex="-1" role="dialog">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="scoreLabel">Time's Up!</h5>
-		      </div>
-		      <div class="modal-body">
-		        <div class="text-success"> Correct Words: <span id="right"></span></div>
-		        <div class="text-danger"> Wrong Words: <span id="wrong"></span></div>
-		        <div class="text-info"> Score: <span id="score"></span></div>
-		      </div>
-		      <div class="modal-footer">
-		        <button id ="close-modal" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-		      </div>
-		    </div>
-		  </div>
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="scoreLabel">Time's Up!</h5>
+					</div>
+					<div class="modal-body border-bottom">
+						<div class="border-bottom">
+							<div class="text-success"> Correct Words: <span id="right"></span></div>
+							<div class="text-danger"> Wrong Words: <span id="wrong"></span></div>
+							<div class="text-primary"> Score: <span id="score"></span></div>
+							<div class="text-info"> Accuracy: <span id="accuracy"></span></div>
+						</div>
+						<div id="score-list" class="d-flex mt-3">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button id ="close-modal" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
